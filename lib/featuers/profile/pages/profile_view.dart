@@ -46,17 +46,19 @@ class ProfileView extends StatelessWidget {
                    CircleAvatar(
                       radius: mediaQuary.width*.15,
                       backgroundImage:const AssetImage(
-                        "assets/images/logo red2.png",
+                        "assets/images/profile.png",
+                        
                       )),
-                       //SizedBox
+                      
                   //SizedBox
                      SizedBox(
                       height:mediaQuary.height*.020,
                     ),
+                    //Edit Profile Picture
                     const  Text("Edit Profile Picture",style:TextStyle(
                        fontWeight: FontWeight.bold,
                        fontSize: 17,
-                       fontStyle: FontStyle.italic
+                       //fontStyle: FontStyle.italic
                        ),),
                 //SizedBox
                      SizedBox(
