@@ -13,6 +13,7 @@ bool? obscureText;
     var theme = Theme.of(context);
 
     return TextFormField(
+      textAlign: TextAlign.center,
     cursorColor: Colors.red,
       maxLength: 1,
       obscureText: obscureText!,

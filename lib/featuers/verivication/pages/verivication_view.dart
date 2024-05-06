@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
-import 'package:rover_app/featuers/setting_provider.dart';
+import 'package:rover_app/featuers/settings/setting_provider.dart';
 import 'package:rover_app/featuers/verivication/widgets/text_form_field.dart';
 
 class VerivicationView extends StatelessWidget {
@@ -15,6 +15,7 @@ var formKey = GlobalKey<FormState>(); //(2   :validat)
     var vm = Provider.of<SettingProvider>(context);
     
     return Scaffold(
+      resizeToAvoidBottomInset:false,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 35),
         child: Form(    //(3   :validat)
@@ -61,21 +62,24 @@ var formKey = GlobalKey<FormState>(); //(2   :validat)
                         //  
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                      child: Expanded(
-                        child: Column(children: <Widget> [
-                          Row(children: <Widget> [   
+                  //   child: IntrinsicHeight(
+                        child: Column(  
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children:  [
+                          Row(children: [   
                             Expanded(child: TextFormVerivecation()),
                                 Spacer(flex: 1,),
-                                Expanded(child: TextFormVerivecation(),),
+                              Expanded(child: 
+                                TextFormVerivecation(),),
                                 Spacer(),
-                                Expanded(child: TextFormVerivecation(),),
+                              Expanded(child: TextFormVerivecation(),),
                                 Spacer(),
                                 Expanded(child: TextFormVerivecation(),),
                                 
                                 ],)
                             
                               ],),
-                      ),
+                  //    ),
                           ),
         
                           //Sizebox

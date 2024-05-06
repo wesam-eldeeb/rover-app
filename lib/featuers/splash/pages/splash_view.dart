@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/login/pages/login_view.dart';
-import 'package:rover_app/featuers/setting_provider.dart';
+import 'package:rover_app/featuers/settings/setting_provider.dart';
 
                                                    
 

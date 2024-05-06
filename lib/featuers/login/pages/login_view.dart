@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
  import 'package:provider/provider.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
  //import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
  import 'package:rover_app/featuers/register/pages/register_view.dart';
- import 'package:rover_app/featuers/setting_provider.dart';
+ import 'package:rover_app/featuers/settings/setting_provider.dart';
 
 
 class LoginView extends StatelessWidget {
@@ -157,7 +158,7 @@ class LoginView extends StatelessWidget {
                       "Forget password?",
                       textAlign: TextAlign.end,
                       style: theme.textTheme.titleMedium?.copyWith(
-                        color: Color(0xffea1d24),),
+                        color:MyColors.red),
                         
                     ),
 
@@ -184,7 +185,7 @@ class LoginView extends StatelessWidget {
                           ),
                           Text("SIGNUP",
                             style: theme.textTheme.bodyLarge?.copyWith(
-                              color: Colors.red,)
+                              color: MyColors.red,)
                           )
                         ],
                       ),

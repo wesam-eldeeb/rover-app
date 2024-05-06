@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/saftty/widget/listTile.dart';
-import 'package:rover_app/featuers/setting_provider.dart';
+import 'package:rover_app/featuers/settings/setting_provider.dart';
 
 class SafttyView extends StatelessWidget {
   const SafttyView({super.key});

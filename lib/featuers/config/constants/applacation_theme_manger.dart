@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 
 class ApplacationThemeManger {
-  static const Color primary=Colors.red;  //(1)
+  static const Color primary=MyColors.red;  //(1)
 
   /////Light/////////
   static ThemeData lightTheme = ThemeData(
