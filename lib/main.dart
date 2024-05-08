@@ -7,6 +7,7 @@ import 'package:rover_app/featuers/Available%20Trips/pages/availableTrips_screen
 import 'package:rover_app/featuers/Category/pages/tab_container.dart';
 import 'package:rover_app/featuers/ForgetPassword/Pages/forget_password_view.dart';
 import 'package:rover_app/featuers/My%20Trip/pages/myTrip_screen.dart';
+import 'package:rover_app/featuers/askAndAnswer/pages/ask_and_answer.dart';
 import 'package:rover_app/featuers/config/constants/applacation_theme_manger.dart';
 import 'package:rover_app/featuers/home/pages/home_map_view.dart';
 import 'package:rover_app/featuers/login/pages/login_view.dart';
@@ -15,6 +16,7 @@ import 'package:rover_app/featuers/register/pages/register_view.dart';
 import 'package:rover_app/featuers/saftty/pages/saftty_view.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
 import 'package:rover_app/featuers/splash/pages/splash_view.dart';
+import 'package:rover_app/featuers/support/pages/support.dart';
 import 'package:rover_app/featuers/verivication/pages/verivication_view.dart';
 
 
@@ -55,7 +57,9 @@ class MyApp extends StatelessWidget {
 //home: MyApp(),
 //home: AboutScreen(),
 //home:AvailableScreen(),
-home: MytripScreen()  ,
+//home: MytripScreen()  ,
+//home: AskAndAnswerPage(),
+home: SupportPage(),
     );
   }
 }
