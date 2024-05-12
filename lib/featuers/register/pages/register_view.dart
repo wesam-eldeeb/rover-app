@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/login/pages/login_view.dart';
 import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
-import 'package:rover_app/featuers/register/widgets/gender_type.dart';
+import 'package:rover_app/featuers/register/widgets/gender_register_type.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
 
 class RegisterView extends StatelessWidget {
@@ -189,7 +189,7 @@ class RegisterView extends StatelessWidget {
                     ////////Gender////////////
                     Padding(
                                 padding:const EdgeInsets.only(bottom: 10),
-                                child: GenderField(const["male","female"]),
+                                child: GenderSelectionRegister(),
                                 // child: Column(
                                 //   children: [
                                 // const  Padding(

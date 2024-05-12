@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:rover_app/featuers/profile/pages/profile_view.dart';
+import 'package:rover_app/featuers/startJourny/widgets/gender_journy_type.dart';
 import 'package:rover_app/featuers/startJourny/widgets/build_label_and_textField.dart';
 
-class StartJourny extends StatefulWidget {
-  @override
-  _StartJournyState createState() => _StartJournyState();
-}
+class StartJourny extends StatelessWidget {
+//   const StartJourny({super.key});
 
-class _StartJournyState extends State<StartJourny> {
-  int? _genderValue;
+//   @override
+//   _StartJournyState createState() => _StartJournyState();
+// }
+
+// class _StartJournyState extends State<StartJourny> {
+   int? _genderValue;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class _StartJournyState extends State<StartJourny> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.red),
+          icon:const Icon(Icons.arrow_back, color: Colors.red),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Row(
@@ -86,53 +89,54 @@ class _StartJournyState extends State<StartJourny> {
         ),
       ),
     );
-  }
+    // }
 
-  Widget buildGenderSelection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Gender',
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16.0),
-        ),
-        const SizedBox(height: 10.0),
-        Row(
-          children: [
-            Radio(
-              value: 1,
-              groupValue: _genderValue,
-              onChanged: (int? value) {
-                setState(() {
-                  _genderValue = value;
-                });
-              },
-            ),
-            Text('Female'),
-            Radio(
-              value: 0,
-              groupValue: _genderValue,
-              onChanged: (int? value) {
-                setState(() {
-                  _genderValue = value;
-                });
-              },
-            ),
-            Text('Male'),
-            Radio(
-              value: 2,
-              groupValue: _genderValue,
-              onChanged: (int? value) {
-                setState(() {
-                  _genderValue = value;
-                });
-              },
-            ),
-            Text('Other'),
-          ],
-        ),
-      ],
-    );
+    // Widget buildGenderSelection() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: [
+    //       const Text(
+    //         'Gender',
+    //         style: TextStyle(
+    //             color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16.0),
+    //       ),
+    //       const SizedBox(height: 10.0),
+    //       Row(
+    //         children: [
+    //           Radio(
+    //             value: 1,
+    //             groupValue: _genderValue,
+    //             onChanged: (int? value) {
+    //               setState(() {
+    //                 _genderValue = value;
+    //               });
+    //             },
+    //           ),
+    //           Text('Female'),
+    //           Radio(
+    //             value: 0,
+    //             groupValue: _genderValue,
+    //             onChanged: (int? value) {
+    //               setState(() {
+    //                 _genderValue = value;
+    //               });
+    //             },
+    //           ),
+    //           Text('Male'),
+    //           Radio(
+    //             value: 2,
+    //             groupValue: _genderValue,
+    //             onChanged: (int? value) {
+    //               setState(() {
+    //                 _genderValue = value;
+    //               });
+    //             },
+    //           ),
+    //           Text('Other'),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
   }
 }

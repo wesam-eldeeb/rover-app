@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/config/constants/applacation_theme_manger.dart';
 import 'package:rover_app/featuers/home/pages/home_map_view.dart';
+import 'package:rover_app/featuers/register/pages/register_view.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
 
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
 
       home: HomeMapView(),
 //  home: LoginView(),
-
+//home: RegisterView(),
 //home: AskAndAnswerPage(),
 
 //home: ChatPage() ,

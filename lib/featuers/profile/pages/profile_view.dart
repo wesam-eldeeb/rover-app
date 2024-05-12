@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
-import 'package:rover_app/featuers/profile/widgets/gender_type.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
+import 'package:rover_app/featuers/profile/widgets/gender_profile.dart';
 
 class ProfileView extends StatelessWidget {
   static const String routeName =
@@ -163,44 +163,9 @@ class ProfileView extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.only(bottom: 10),
                   ),
-                  Column(
-              children: [
-            const  Padding(
-              padding: EdgeInsets.only(right: 200),
-                child: 
-                Text(
-                          
-                          'Gender : ',
-                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),
-                          textAlign: TextAlign.start,
-                        ),
-              ),  
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: [
-                      const    Icon(Icons.male),
-                          GenderField(const["male"]),
-                        ],
-                      ),
-                    ),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: [
-                      const    Icon(Icons.male),
-                          GenderField(const["female"]),
-                        ],
-                      ),
-                    ),
-                    
-                  ],
-                ),
-              ],
-            ),
+                  //Gender
+                  GenderSelectionProfile(),
+                 
                 //Sizebox
                    SizedBox(
                     height:mediaQuary.height*.030,

@@ -18,7 +18,7 @@ class SafttyView extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title:const Text(
-            'Saffty',
+            'Safety',
           style: TextStyle(
               color: Color(0xff030F09),
               fontSize: 18,

@@ -33,7 +33,7 @@ class ElvationButtonPassenger extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ElevationButtonMap(text: " \t Searsh \t", onPreseed: () {
+                      ElevationButtonMap(text: " \t\t \t\t  Searsh \t\t \t\t ", onPreseed: () {
           Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) {
                           return AvailableScreen();
                         })
