@@ -15,7 +15,7 @@ class _SettingsScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title:const Text(
           'Setting',
           style: TextStyle(
             color: Color(0xff030F09),
@@ -23,10 +23,13 @@ class _SettingsScreenState extends State<SettingScreen> {
           ),
         ),
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Color(0xffE60024),
-        ),
+        leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: Colors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
+          ),
         backgroundColor: Colors.white,
       ),
       body: ListView(

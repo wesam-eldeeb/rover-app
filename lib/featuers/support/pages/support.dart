@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rover_app/featuers/About/pages/about_screen.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
+import 'package:rover_app/featuers/howToUse/pages/how_to_use.dart';
 import 'package:rover_app/featuers/support/widgets/support_button.dart';
 
 
@@ -11,21 +14,23 @@ class SupportPage extends StatelessWidget {
         appBar: AppBar(
           title:const Text(
             'Support',
-            style:  TextStyle(color: Colors.black), // Change text color to black
+            style: TextStyle(
+              color: Color(0xff030F09),
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           centerTitle: true,
           leading: IconButton(
             icon:const Icon(
               Icons.arrow_back,
-              color: Colors.red, // Change arrow color to red
+              color: Colors.red, 
             ),
-            onPressed: () {
-              // Handle back button press
-            },
+            onPressed:  () => Navigator.pop(context),
           ),
-          backgroundColor: Colors.white, // Change app bar color to white
+          backgroundColor: Colors.white, 
         ),
-        backgroundColor: Colors.grey[200], // Reduce scaffold background color brightness
+        backgroundColor: Colors.grey[200], 
         body: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
@@ -35,64 +40,75 @@ class SupportPage extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
+                    //Common Questions
                     child: SupportButton(
                       icon: Icons.help,
                       text: 'Common\n Questions',
                       color: Colors.white,
-                       // Set button background color here
+                      
                       onPressed: () {
-                        // Implement common questions functionality
+                        
                       },
                     ),
                   ),
-                 SizedBox(width:mediaQuary.width*0.04), // Increase spacing between buttons
+                 SizedBox(width:mediaQuary.width*0.04), 
                   Expanded(
+                    //How TO Use
                     child: SupportButton(
                       icon: Icons.info,
                       text: 'How to \n Use',
                       color: Colors.white, // Set button background color here
                       onPressed: () {
-                        // Implement how to use functionality
+              //           Navigator.push(context,
+              //     MaterialPageRoute(builder: (BuildContext context) {
+              //   return HowToUse();
+              // }
+              // ));
                       },
                     ),
                   ),
                 ],
               ),
-             SizedBox(height:mediaQuary.height*0.07), // Increase vertical spacing between rows
+             SizedBox(height:mediaQuary.height*0.07), 
               Row(
                 children: [
                   Expanded(
+                  //  Maintenance Service
                     child: SupportButton(
                       icon: Icons.settings,
                       text: 'Maintenance\n Service',
                       color: Colors.white, // Set button background color here
                       onPressed: () {
-                        // Implement maintenance service functionality
+                        
                       },
                     ),
                   ),
-                 SizedBox(width: mediaQuary.width*.04), // Increase spacing between buttons
+                 SizedBox(width: mediaQuary.width*.04), 
                   Expanded(
+                    //About
                     child: SupportButton(
                       icon: Icons.info,
                       text: 'About \n',
-                      color: Colors.white, // Set button background color here
+                      color: Colors.white, 
                       onPressed: () {
-                        // Implement about functionality
+                        Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return AboutScreen();
+              }
+              ));
                       },
                     ),
                   ),
                 ],
               ),
-             SizedBox(height: mediaQuary.height*0.07), // Increase vertical spacing between rows
+             SizedBox(height: mediaQuary.height*0.07), 
               SizedBox(
-                width: double.infinity, // Make button width expand to fill the space
+                width: double.infinity, 
                 child: SupportButton(
                   icon: Icons.build,
                   text: 'Specialized \n Service',
-                  color:const Color.fromARGB(255, 254, 255, 255), // Set button background color here
+                  color:const Color.fromARGB(255, 254, 255, 255),
                   onPressed: () {
-                    // Implement specialized service functionality
                   },
                 ),
               ),

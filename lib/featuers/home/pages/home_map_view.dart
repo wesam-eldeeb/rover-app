@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/home/widget/elevation_button_driver.dart';
 import 'package:rover_app/featuers/home/widget/elevation_button_passenger.dart';
-
+import 'package:rover_app/featuers/home/widget/custom_navigater_drawer.dart';
 
 class HomeMapView extends StatelessWidget {
   const HomeMapView({super.key});
@@ -12,6 +12,23 @@ class HomeMapView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //  this is defult app bar
+      appBar: AppBar(
+        backgroundColor: MyColors.red,
+        title:const Text(
+          'Welcom In Rover',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      //Drawer
+      drawer: CustomNavigationDrawer()
+
+      //Desien on page
+      ,
       body: Stack(
         children: [
           Image.asset(
@@ -45,4 +62,6 @@ class HomeMapView extends StatelessWidget {
       ),
     );
   }
+
 }
+

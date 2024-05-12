@@ -3,6 +3,7 @@ import 'package:rover_app/featuers/Category/widgets/tab_item.dart';
 import 'package:rover_app/featuers/My%20Trip/widgets/myTrip_delete.dart';
 
 import 'package:rover_app/featuers/My%20Trip/widgets/myTrip_item.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 
 class MytripScreen extends StatelessWidget {
   static const String routeName = 'myTrip_screen';
@@ -13,15 +14,19 @@ class MytripScreen extends StatelessWidget {
         appBar: AppBar(
           title:const Text(
             'MyTrip',
-            style:TextStyle(
+            style: TextStyle(
               color: Color(0xff030F09),
               fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
           ),
           centerTitle: true,
-          leading:const Icon(
-            Icons.arrow_back_ios,
-            color: Color(0xffE60024),
+          leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: Colors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
           ),
           actions: [
             Image.asset(

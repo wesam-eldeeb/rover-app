@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/login/widgets/text_formfild_custom.dart';
 import 'package:rover_app/featuers/profile/widgets/gender_type.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
@@ -24,6 +25,25 @@ class ProfileView extends StatelessWidget {
     var vm = Provider.of<SettingProvider>(context);
 
     return Scaffold(
+        appBar: AppBar(
+          title:const Text(
+            'Profile',
+            style: TextStyle(
+              color: Color(0xff030F09),
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: MyColors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
+          ),
+          backgroundColor: Colors.white, 
+        ),
       body: Padding(
         padding: const EdgeInsets.all(40), //اطراف العمود
         child: SingleChildScrollView(

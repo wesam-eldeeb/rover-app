@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 
 class AboutScreen extends StatelessWidget {
   static const String routeName = 'about_screen';
@@ -10,21 +11,23 @@ class AboutScreen extends StatelessWidget {
         MediaQuery.of(context).size; 
     var theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        title:const Text(
-          'About',
-          style: TextStyle(
-            color: Color(0xff030F09),
-            fontSize: 18,
+      appBar:  AppBar(
+          title:const Text(
+            'About',
+            style:  TextStyle(color: MyColors.red), 
           ),
-        ),
-        centerTitle: true,
-        leading:const Icon(
-          Icons.arrow_back_ios,
-          color: Color(0xffE60024),
+          centerTitle: true,
+          leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: Colors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
+          ),
+          backgroundColor: Colors.white, 
         ),
         backgroundColor: Colors.white,
-      ),
+      
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,

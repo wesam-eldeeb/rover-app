@@ -15,12 +15,16 @@ class AvailableScreen extends StatelessWidget {
             style: TextStyle(
               color: Color(0xff030F09),
               fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
           ),
           centerTitle: true,
-          leading: Icon(
-            Icons.arrow_back_ios,
-            color: Color(0xffE60024),
+          leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: Colors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
           ),
           actions: [
             Image.asset(

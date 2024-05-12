@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:rover_app/featuers/config/constants/colors/my_colors.dart';
 import 'package:rover_app/featuers/saftty/widget/listTile.dart';
+import 'package:rover_app/featuers/saftty/widget/show_model_bottom_sheet.dart';
 import 'package:rover_app/featuers/settings/setting_provider.dart';
 
 class SafttyView extends StatelessWidget {
@@ -16,13 +18,24 @@ class SafttyView extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title:const Text(
-            'safety',
-            style: TextStyle(color: Colors.black), 
+            'Saffty',
+          style: TextStyle(
+              color: Color(0xff030F09),
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          backgroundColor: Colors.white,
-          iconTheme:const IconThemeData(color: Colors.black), 
-          leading:const Icon(Icons.menu), 
+          centerTitle: true,
+          leading: IconButton(
+            icon:const Icon(
+              Icons.arrow_back,
+              color: Colors.red, 
+            ),
+            onPressed:  () => Navigator.pop(context),
+          ),
+          backgroundColor: Colors.white, 
         ),
+          
       body: Column(children: [
           //Sizebox
                        SizedBox(
@@ -51,14 +64,34 @@ class SafttyView extends StatelessWidget {
                          SizedBox(
                           height:mediaQuary.height*.030,
                         ),
-
-                        ListTileSaftty(leading:const Icon(Icons.phone), title: ("Ambulance"), ),
-                          ListTileSaftty(leading:const Icon(Icons.phone), title:  ("Police"), ),
-                            ListTileSaftty(leading:const Icon(Icons.security), title:  ("Massage"), ),
-                              ListTileSaftty(leading:const Icon(Icons.safety_check), title: ("Safety tips"), )
+        //Ambulance
+                        ListTileSaftty(leading: Icon(Icons.phone), title: ("Ambulance"),
+                        onTap: () {    
+  ShowModelBottomSheet(context ,"175",);
+                        }
+                         ),
+          //police               
+                          ListTileSaftty(leading:const Icon(Icons.phone), title:  ("Police"),
+                            onTap: () {
+                            ShowModelBottomSheet( context,"112",);
+                        }
+                           ),
+              //massage             
+              ListTileSaftty(leading:const Icon(Icons.security), title:  ("Massage"), 
+                onTap: () {
+                            ShowModelBottomSheet(context,"Talk to someone you trust.\n This could be a friend,\n family member, therapist,or anyone else you feel \ncomfortable confiding ",);
+                          
+                        }),
+                //safety
+              ListTileSaftty(leading:const Icon(Icons.safety_check), title: ("Safety tips"),
+                onTap: () {
+                            ShowModelBottomSheet(context,"ohhhhhhhhhhhhh",);
+                        } )
                       
 
       ],),
     );
   }
+
+
 }
